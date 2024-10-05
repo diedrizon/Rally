@@ -105,32 +105,36 @@
         }
         .card-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsivo */
             gap: 20px;
         }
         .card {
             position: relative;
-            background-color: rgb(179, 220, 218); /* Azul claro */
+            background-color: #fff; /* Fondo blanco */
             border-radius: 8px;
-            padding: 10px; /* Reducir padding para menos espacio */
+            border: 2px solid rgb(135, 206, 235); /* Borde color celeste */
+            padding: 10px;
             text-align: center;
             overflow: hidden;
             transition: all 0.3s ease;
             color: rgb(15, 121, 56); /* Verde oscuro */
         }
         .card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         .card-image {
             position: relative;
             overflow: hidden;
             border-radius: 4px;
-            height: 250px; /* Altura fija para todas las imágenes */
+            height: 200px; /* Altura fija para las imágenes */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .card-image img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain; /* Muestra la imagen completa */
             transition: transform 0.3s ease;
             background-color: #fff; /* Fondo blanco para imágenes */
@@ -173,7 +177,7 @@
             margin-top: 10px;
         }
         .card h3, .card p {
-            margin-top: 5px; /* Reducir margen para menos espacio */
+            margin-top: 10px; /* Ajustar margen para espaciamiento */
         }
         footer {
             background-color: rgb(15, 121, 56); /* Verde oscuro */
@@ -209,9 +213,6 @@
             nav ul li {
                 margin-left: 15px;
                 margin-top: 0;
-            }
-            .card-container {
-                grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
             }
             h1 {
                 font-size: 1.8em;
@@ -253,7 +254,7 @@
                 <!-- Tarjeta 1 - Bolsa Adelante -->
                 <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.2s">
                     <div class="card-image">
-                        <img src="/Bolsa adelente.jpg" alt="Bolsa Adelante">
+                        <img src="/Bolsa_adelente.png" alt="Bolsa Adelante">
                         <div class="card-hover-text">
                             <p>
                                 Nuestra bolsa biodegradable está elaborada a partir de fibra de coco, tela de yute y cartón reciclado. Esta combinación de materiales naturales ofrece una resistencia óptima y una alternativa ecológica al plástico tradicional.
@@ -267,7 +268,7 @@
                 <!-- Tarjeta 2 - Bolsa Trasera -->
                 <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
                     <div class="card-image">
-                        <img src="/Bolsa trasero.jpg" alt="Bolsa Trasera">
+                        <img src="/Bolsa_trasero.png" alt="Bolsa Trasera">
                         <div class="card-hover-text">
                             <p>
                                 El diseño trasero de nuestra bolsa refleja el compromiso con la sostenibilidad. Al utilizar materiales biodegradables, contribuimos a reducir la contaminación y promovemos prácticas más responsables.
@@ -281,7 +282,7 @@
                 <!-- Tarjeta 3 - Caja Biodegradable -->
                 <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.6s">
                     <div class="card-image">
-                        <img src="/caja.jpg" alt="Caja Biodegradable">
+                        <img src="/caja.png" alt="Caja Biodegradable">
                         <div class="card-hover-text">
                             <p>
                                 Nuestra caja biodegradable, hecha de cartón reciclado, es perfecta para el embalaje sostenible. Ofrece una solución práctica y ecológica para diversas necesidades de empaque.
