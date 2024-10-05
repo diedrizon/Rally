@@ -17,24 +17,22 @@
         body, html {
             font-family: Arial, sans-serif;
             scroll-behavior: smooth;
-            background: linear-gradient(135deg, #00a86b, #008080);
-            color: white;
+            background-color: rgb(254, 254, 254); /* Blanco */
+            color: rgb(15, 121, 56); /* Verde oscuro */
         }
         header {
-            background: rgba(0, 0, 0, 0.6);
+            background-color: rgb(15, 121, 56); /* Verde oscuro */
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: top 0.3s;
         }
         nav {
             display: flex;
             align-items: center;
-            padding: 1em;
-        }
-        nav .logo {
-            margin-right: 20px;
+            justify-content: space-between;
+            padding: 1em 2em;
         }
         nav .logo img {
             height: 50px;
@@ -52,10 +50,11 @@
             margin-left: 20px;
         }
         nav ul li a {
-            color: white;
+            color: rgb(254, 254, 254); /* Blanco */
             text-decoration: none;
             position: relative;
             transition: color 0.3s ease;
+            font-weight: bold;
         }
         nav ul li a::after {
             content: '';
@@ -64,11 +63,11 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #ffd700;
+            background-color: rgb(179, 220, 218); /* Azul claro */
             transition: width 0.3s ease;
         }
         nav ul li a:hover {
-            color: #ffd700;
+            color: rgb(179, 220, 218); /* Azul claro */
         }
         nav ul li a:hover::after {
             width: 100%;
@@ -83,6 +82,12 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .content h1 {
+            color: rgb(15, 121, 56); /* Verde oscuro */
+        }
+        .content p {
+            color: rgb(106, 179, 102); /* Verde claro */
+        }
         .category {
             max-width: 1200px;
             margin: 0 auto;
@@ -94,6 +99,7 @@
             font-size: 2em;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: rgb(15, 121, 56); /* Verde oscuro */
         }
         .card-container {
             display: grid;
@@ -102,12 +108,13 @@
         }
         .card {
             position: relative;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgb(179, 220, 218); /* Azul claro */
             border-radius: 8px;
             padding: 20px;
             text-align: center;
             overflow: hidden;
             transition: all 0.3s ease;
+            color: rgb(15, 121, 56); /* Verde oscuro */
         }
         .card:hover {
             transform: translateY(-10px) scale(1.05);
@@ -133,8 +140,8 @@
             left: 0;
             width: 100%;
             height: 150px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.8);
+            color: rgb(254, 254, 254); /* Blanco */
+            background-color: rgba(15, 121, 56, 0.9); /* Verde oscuro con transparencia */
             opacity: 0;
             transition: opacity 0.3s ease;
             padding: 10px;
@@ -153,7 +160,7 @@
         }
         .card-hover-text .ver-mas {
             background-color: transparent;
-            color: white;
+            color: rgb(254, 254, 254); /* Blanco */
             border: none;
             cursor: pointer;
             text-decoration: underline;
@@ -161,42 +168,39 @@
             margin-top: 10px;
         }
         footer {
-            background-color: #333;
+            background-color: rgb(15, 121, 56); /* Verde oscuro */
             text-align: center;
             padding: 20px;
             width: 100%;
+            color: rgb(254, 254, 254); /* Blanco */
         }
         .social-icons a {
-            color: white;
+            color: rgb(254, 254, 254); /* Blanco */
             margin: 0 10px;
             font-size: 24px;
             text-decoration: none;
             transition: color 0.3s ease, transform 0.3s ease;
         }
         .social-icons a:hover {
-            color: #ffd700;
+            color: rgb(179, 220, 218); /* Azul claro */
             transform: scale(1.2);
         }
         /* Diseño responsive */
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
-                align-items: center;
+                /* Mantener el encabezado horizontal en dispositivos móviles */
+                flex-direction: row;
+                justify-content: space-between;
             }
             nav .logo {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-            nav .logo img {
-                height: 40px;
+                margin-bottom: 0;
             }
             nav ul {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
             }
             nav ul li {
-                margin-left: 0;
-                margin-top: 10px;
+                margin-left: 15px;
+                margin-top: 0;
             }
             .card-container {
                 grid-template-columns: 1fr;
@@ -212,10 +216,12 @@
     </style>
 </head>
 <body>
-    <header class="animate__animated animate__fadeInDown">
+    <header class="animate_animated animate_fadeInDown">
         <nav>
             <div class="logo">
-                <a href="#"><img src="https://picsum.photos/150/50" alt="Logo"></a>
+                <a href="#">
+                    <img src="/Logo.png" alt="Logo">
+                </a>
             </div>
             <ul>
                 <li><a href="#perfil">Perfil</a></li>
@@ -227,18 +233,19 @@
 
     <main>
         <div class="content">
-            <h1 class="wow animate__animated animate__fadeInLeft">Definición como empresa</h1>
-            <p class="wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">Nuestra misión es proporcionar soluciones innovadoras que impulsen el crecimiento sostenible y generen valor para nuestros clientes.</p>
+            <h1 class="wow animate_animated animate_fadeInLeft">Definición como empresa</h1>
+            <p class="wow animate_animated animate_fadeInRight" data-wow-delay="0.2s">Nuestra misión es proporcionar soluciones innovadoras que impulsen el crecimiento sostenible y generen valor para nuestros clientes.</p>
         </div>
 
         <!-- Sección de Bolsas -->
         <section class="category">
-            <h2 class="wow animate__animated animate__fadeInUp">Bolsas</h2>
+            <h2 class="wow animate_animated animate_fadeInUp">Bolsas</h2>
             <div class="card-container">
                 <!-- Tarjeta 1 de Bolsas -->
-                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.2s">
+                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.2s">
                     <div class="card-image">
-                        <img src="https://picsum.photos/200/150?random=5" alt="Bolsa 1">
+                        <!-- Cambia la ruta 'ruta/a/tu/imagen1.jpg' por la ubicación de tu imagen -->
+                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Bolsa 1">
                         <div class="card-hover-text">
                             <p>Descripción adicional de la Bolsa 1 que puede ser más larga y necesita un "Ver más".</p>
                             <button class="ver-mas">Ver más</button>
@@ -248,9 +255,10 @@
                     <p>Descripción breve de la Bolsa 1.</p>
                 </div>
                 <!-- Tarjeta 2 de Bolsas -->
-                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
+                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.4s">
                     <div class="card-image">
-                        <img src="https://picsum.photos/200/150?random=6" alt="Bolsa 2">
+                        <!-- Cambia la ruta 'ruta/a/tu/imagen2.jpg' por la ubicación de tu imagen -->
+                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Bolsa 2">
                         <div class="card-hover-text">
                             <p>Descripción adicional de la Bolsa 2 que puede ser más larga y necesita un "Ver más".</p>
                             <button class="ver-mas">Ver más</button>
@@ -264,12 +272,13 @@
 
         <!-- Sección de Jugos -->
         <section class="category">
-            <h2 class="wow animate__animated animate__fadeInUp">Jugos</h2>
+            <h2 class="wow animate_animated animate_fadeInUp">Jugos</h2>
             <div class="card-container">
                 <!-- Tarjeta 1 de Jugos -->
-                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.2s">
+                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.2s">
                     <div class="card-image">
-                        <img src="https://picsum.photos/200/150?random=7" alt="Jugo 1">
+                        <!-- Cambia la ruta 'ruta/a/tu/imagen3.jpg' por la ubicación de tu imagen -->
+                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Jugo 1">
                         <div class="card-hover-text">
                             <p>Descripción adicional del Jugo 1 que puede ser más larga y necesita un "Ver más".</p>
                             <button class="ver-mas">Ver más</button>
@@ -279,9 +288,10 @@
                     <p>Descripción breve del Jugo 1.</p>
                 </div>
                 <!-- Tarjeta 2 de Jugos -->
-                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
+                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.4s">
                     <div class="card-image">
-                        <img src="https://picsum.photos/200/150?random=8" alt="Jugo 2">
+                        <!-- Cambia la ruta 'ruta/a/tu/imagen4.jpg' por la ubicación de tu imagen -->
+                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Jugo 2">
                         <div class="card-hover-text">
                             <p>Descripción adicional del Jugo 2 que puede ser más larga y necesita un "Ver más".</p>
                             <button class="ver-mas">Ver más</button>
@@ -294,15 +304,15 @@
         </section>
     </main>
 
-    <footer id="contacto" class="animate__animated animate__fadeInUp">
+    <footer id="contacto" class="animate_animated animate_fadeInUp">
         <h2>Contacto</h2>
         <p>Email: info@nuestraempresa.com</p>
         <p>Teléfono: +505 8825 7506</p>
         <div class="social-icons">
-            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0s" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0.1s" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0.2s" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0.3s" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0s" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0.1s" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0.2s" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0.3s" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
 
@@ -333,16 +343,19 @@
             });
         });
 
-        // Reducir el tamaño del encabezado al hacer scroll
-        window.addEventListener('scroll', () => {
+        // Ocultar y mostrar el encabezado al hacer scroll
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.padding = '0.5em';
-                header.style.background = 'rgba(0, 0, 0, 0.8)';
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scroll hacia abajo - ocultar encabezado
+                header.style.top = '-100px';
             } else {
-                header.style.padding = '1em';
-                header.style.background = 'rgba(0, 0, 0, 0.6)';
+                // Scroll hacia arriba - mostrar encabezado
+                header.style.top = '0';
             }
+            lastScrollTop = scrollTop;
         });
     </script>
 </body>
