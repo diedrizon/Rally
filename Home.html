@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Empresa</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(135deg, #00a86b, #008080);
+            color: white;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        nav .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+            margin-left: 20px;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding-top: 80px;
+            background: linear-gradient(135deg, #00a86b, #008080);
+            min-height: 100vh;
+            color: white;
+        }
+        .content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .cta-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .card {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .card-image {
+            position: relative;
+        }
+        .card-image img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+        }
+        .card-hover-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .card:hover .card-hover-text {
+            opacity: 1;
+        }
+        .card-hover-text p {
+            max-height: 50px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .card-hover-text p.expanded {
+            max-height: 200px;
+        }
+        .card-hover-text .ver-mas {
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="https://picsum.photos/150/50" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Definición como empresa</h1>
+            <p>Nuestra misión es proporcionar soluciones innovadoras que impulsen el crecimiento sostenible y generen valor para nuestros clientes.</p>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/150?random=1" alt="Servicio 1">
+                    <div class="card-hover-text">
+                        <p>Descripción adicional del servicio 1 que puede ser más larga y necesita un "Ver más".</p>
+                        <button class="ver-mas">Ver más</button>
+                    </div>
+                </div>
+                <h3>Servicio 1</h3>
+                <p>Descripción breve del servicio 1.</p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/150?random=2" alt="Servicio 2">
+                    <div class="card-hover-text">
+                        <p>Descripción adicional del servicio 2 que puede ser más larga y necesita un "Ver más".</p>
+                        <button class="ver-mas">Ver más</button>
+                    </div>
+                </div>
+                <h3>Servicio 2</h3>
+                <p>Descripción breve del servicio 2.</p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/150?random=3" alt="Servicio 3">
+                    <div class="card-hover-text">
+                        <p>Descripción adicional del servicio 3 que puede ser más larga y necesita un "Ver más".</p>
+                        <button class="ver-mas">Ver más</button>
+                    </div>
+                </div>
+                <h3>Servicio 3</h3>
+                <p>Descripción breve del servicio 3.</p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/200/150?random=4" alt="Servicio 4">
+                    <div class="card-hover-text">
+                        <p>Descripción adicional del servicio 4 que puede ser más larga y necesita un "Ver más".</p>
+                        <button class="ver-mas">Ver más</button>
+                    </div>
+                </div>
+                <h3>Servicio 4</h3>
+                <p>Descripción breve del servicio 4.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: info@nuestraempresa.com</p>
+        <p>Teléfono: +1 234 567 890</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">i</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="WhatsApp">w</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Ver más functionality for cards
+        const cardVerMasButtons = document.querySelectorAll('.card-hover-text .ver-mas');
+
+        cardVerMasButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const cardText = button.previousElementSibling;
+                cardText.classList.toggle('expanded');
+                button.textContent = cardText.classList.contains('expanded') ? 'Ver menos' : 'Ver más';
+            });
+        });
+    </script>
+</body>
+</html>
