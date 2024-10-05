@@ -21,7 +21,7 @@
             color: rgb(15, 121, 56); /* Verde oscuro */
         }
         header {
-            background-color: rgb(15, 121, 56); /* Verde oscuro */
+            background-color: transparent; /* Hacemos el fondo transparente */
             position: fixed;
             width: 100%;
             top: 0;
@@ -35,7 +35,7 @@
             padding: 1em 2em;
         }
         nav .logo img {
-            height: 50px;
+            height: 80px; /* Aumentamos el tamaño del logo */
             transition: transform 0.3s ease;
         }
         nav .logo img:hover {
@@ -50,7 +50,7 @@
             margin-left: 20px;
         }
         nav ul li a {
-            color: rgb(254, 254, 254); /* Blanco */
+            color: rgb(15, 121, 56); /* Verde oscuro */
             text-decoration: none;
             position: relative;
             transition: color 0.3s ease;
@@ -73,7 +73,7 @@
             width: 100%;
         }
         main {
-            padding-top: 100px;
+            padding-top: 120px; /* Ajustamos el padding-top debido al aumento del logo */
             min-height: 100vh;
         }
         .content {
@@ -87,6 +87,16 @@
         }
         .content p {
             color: rgb(106, 179, 102); /* Verde claro */
+        }
+        /* Sección del logo en el cuerpo de la página */
+        .main-logo {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .main-logo img {
+            width: 200px;
+            height: auto;
         }
         .category {
             max-width: 1200px;
@@ -103,7 +113,7 @@
         }
         .card-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
             gap: 20px;
         }
         .card {
@@ -203,7 +213,7 @@
                 margin-top: 0;
             }
             .card-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
             }
             h1 {
                 font-size: 1.8em;
@@ -216,10 +226,11 @@
     </style>
 </head>
 <body>
-    <header class="animate_animated animate_fadeInDown">
+    <header class="animate__animated animate__fadeInDown">
         <nav>
             <div class="logo">
                 <a href="#">
+                    <!-- Asegúrate de que la ruta del logo sea correcta -->
                     <img src="/Logo.png" alt="Logo">
                 </a>
             </div>
@@ -233,19 +244,24 @@
 
     <main>
         <div class="content">
-            <h1 class="wow animate_animated animate_fadeInLeft">Definición como empresa</h1>
-            <p class="wow animate_animated animate_fadeInRight" data-wow-delay="0.2s">Nuestra misión es proporcionar soluciones innovadoras que impulsen el crecimiento sostenible y generen valor para nuestros clientes.</p>
+            <h1 class="wow animate__animated animate__fadeInLeft">Definición como empresa</h1>
+            <p class="wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">Nuestra misión es proporcionar soluciones innovadoras que impulsen el crecimiento sostenible y generen valor para nuestros clientes.</p>
+        </div>
+
+        <!-- Logo en el cuerpo de la página -->
+        <div class="main-logo">
+            <img src="/Logo 1.png" alt="Logo Principal">
         </div>
 
         <!-- Sección de Bolsas -->
         <section class="category">
-            <h2 class="wow animate_animated animate_fadeInUp">Bolsas</h2>
+            <h2 class="wow animate__animated animate__fadeInUp">Bolsas</h2>
             <div class="card-container">
                 <!-- Tarjeta 1 de Bolsas -->
-                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.2s">
+                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.2s">
                     <div class="card-image">
-                        <!-- Cambia la ruta 'ruta/a/tu/imagen1.jpg' por la ubicación de tu imagen -->
-                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Bolsa 1">
+                        <!-- Cambia 'ruta/a/tu/imagen1.jpg' por la ruta real de tu imagen -->
+                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_7cddcd6b.jpg" alt="Bolsa 1">
                         <div class="card-hover-text">
                             <p>Descripción adicional de la Bolsa 1 que puede ser más larga y necesita un "Ver más".</p>
                             <button class="ver-mas">Ver más</button>
@@ -255,10 +271,10 @@
                     <p>Descripción breve de la Bolsa 1.</p>
                 </div>
                 <!-- Tarjeta 2 de Bolsas -->
-                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.4s">
+                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
                     <div class="card-image">
-                        <!-- Cambia la ruta 'ruta/a/tu/imagen2.jpg' por la ubicación de tu imagen -->
-                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Bolsa 2">
+                        <!-- Cambia 'ruta/a/tu/imagen2.jpg' por la ruta real de tu imagen -->
+                        <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_7cddcd6b.jpg" alt="Bolsa 2">
                         <div class="card-hover-text">
                             <p>Descripción adicional de la Bolsa 2 que puede ser más larga y necesita un "Ver más".</p>
                             <button class="ver-mas">Ver más</button>
@@ -272,12 +288,12 @@
 
         <!-- Sección de Jugos -->
         <section class="category">
-            <h2 class="wow animate_animated animate_fadeInUp">Jugos</h2>
+            <h2 class="wow animate__animated animate__fadeInUp">Jugos</h2>
             <div class="card-container">
                 <!-- Tarjeta 1 de Jugos -->
-                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.2s">
+                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.2s">
                     <div class="card-image">
-                        <!-- Cambia la ruta 'ruta/a/tu/imagen3.jpg' por la ubicación de tu imagen -->
+                        <!-- Cambia 'ruta/a/tu/imagen3.jpg' por la ruta real de tu imagen -->
                         <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Jugo 1">
                         <div class="card-hover-text">
                             <p>Descripción adicional del Jugo 1 que puede ser más larga y necesita un "Ver más".</p>
@@ -288,9 +304,9 @@
                     <p>Descripción breve del Jugo 1.</p>
                 </div>
                 <!-- Tarjeta 2 de Jugos -->
-                <div class="card wow animate_animated animate_zoomIn" data-wow-delay="0.4s">
+                <div class="card wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
                     <div class="card-image">
-                        <!-- Cambia la ruta 'ruta/a/tu/imagen4.jpg' por la ubicación de tu imagen -->
+                        <!-- Cambia 'ruta/a/tu/imagen4.jpg' por la ruta real de tu imagen -->
                         <img src="/Imagen de WhatsApp 2024-10-04 a las 21.03.00_871e4344.jpg" alt="Jugo 2">
                         <div class="card-hover-text">
                             <p>Descripción adicional del Jugo 2 que puede ser más larga y necesita un "Ver más".</p>
@@ -304,15 +320,15 @@
         </section>
     </main>
 
-    <footer id="contacto" class="animate_animated animate_fadeInUp">
+    <footer id="contacto" class="animate__animated animate__fadeInUp">
         <h2>Contacto</h2>
         <p>Email: info@nuestraempresa.com</p>
         <p>Teléfono: +505 8825 7506</p>
         <div class="social-icons">
-            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0s" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0.1s" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0.2s" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="wow animate_animated animate_bounceIn" data-wow-delay="0.3s" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0s" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0.1s" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0.2s" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="wow animate__animated animate__bounceIn" data-wow-delay="0.3s" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
 
